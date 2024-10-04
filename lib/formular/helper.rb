@@ -49,7 +49,7 @@ module Formular
 
       options[:model] ||= model
 
-      builder.new(options)
+      builder.new(**options)
     end
 
   end # module Helper
