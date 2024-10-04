@@ -12,7 +12,7 @@ module Formular
       define_element_methods(self.elements)
     end
 
-    ruby2_keywords def self.define_element_methods(elements)
+    ruby2_keywords def self.define_element_methods(**elements)
       elements.each { |k, v| define_element_method(k, v) }
     end
 
