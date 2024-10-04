@@ -253,7 +253,7 @@ module Formular
           if item.last.is_a?(Array)
             opts = { label: item.first, content: collection_to_options(item.last) }
 
-            Formular::Element::OptGroup.new(opts).to_s
+            Formular::Element::OptGroup.new(**opts).to_s
           else
             item_to_option(item)
           end
