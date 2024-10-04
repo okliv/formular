@@ -17,7 +17,7 @@ module Formular
     end
 
     def self.define_element_method(element_name, element_class)
-      define_method(element_name) do |*name, **options, &block|
+      define_method(element_name) do |name, **options, &block|
         # if args.size > 1
         # #   name, options = args
         # else
