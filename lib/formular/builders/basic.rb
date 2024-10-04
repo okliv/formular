@@ -34,7 +34,7 @@ module Formular
         @path_prefix = path_prefix
         @errors = errors || (model ? model.errors : {})
         @values = values || {}
-        super(elements)
+        super(**elements)
       end
       attr_reader :model, :errors, :values
 
