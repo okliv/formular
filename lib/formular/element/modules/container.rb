@@ -46,10 +46,10 @@ module Formular
           # Delegate missing methods to the builder
           # TODO:: @apotonick is going to do something fancy here to delegate
           # the builder methods rather then using this method missing.
-          def method_missing(method, *args, &block)
+          def method_missing(method, ...)
             return super unless builder
 
-            builder.send(method, *args, &block)
+            builder.send(method, ...)
           end
         end # module InstanceMethods
       end # module Container

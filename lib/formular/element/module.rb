@@ -26,8 +26,8 @@ module Formular
       end # module Included
 
       module ClassMethods
-        def method_missing(method, *args, &block)
-          heritage.record(method, *args, &block)
+        def method_missing(method, ...)
+          heritage.record(method, ...)
         end
       end # module ClassMethods
     end # module Module

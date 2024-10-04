@@ -63,8 +63,8 @@ module Formular
     #
     # @since 0.1.0
     # @api private
-    def method_missing(m, *args, &blk)
-      @context.__send__(m, *args, &blk)
+    def method_missing(m, ...)
+      @context.__send__(m, ...)
     end
   end # class HtmlBlock
 end # module Formular
