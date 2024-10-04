@@ -272,7 +272,7 @@ module Formular
 
         opts[:selected] = 'selected' if item_is_selected(opts[:value], options[:value], options[:multiple])
 
-        Formular::Element::Option.new(opts).to_s
+        Formular::Element::Option.new(**opts).to_s
       end
 
       def item_is_selected(option_val, current_val, multiple)
