@@ -31,7 +31,7 @@ module Formular
         options[:builder] = self
         options[:attribute_name] = name if name
 
-        element_class.(options, &block)
+        element_class.(**options, &block)
       end
     end
 
