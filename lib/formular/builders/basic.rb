@@ -7,7 +7,7 @@ module Formular
     # viewbuilder and this basic class as Form
     class Basic < Formular::Builder
       element_set(
-        {error_notification: Formular::Element::ErrorNotification,
+        error_notification: Formular::Element::ErrorNotification,
         form: Formular::Element::Form,
         fieldset: Formular::Element::Fieldset,
         legend: Formular::Element::Legend,
@@ -26,7 +26,7 @@ module Formular
         checkbox: Formular::Element::Checkbox,
         radio: Formular::Element::Radio,
         wrapper: Formular::Element::Div,
-        error_wrapper: Formular::Element::Div}
+        error_wrapper: Formular::Element::Div
       )
 
       def initialize(model: nil, path_prefix: nil, errors: nil, values: nil, elements: {})
