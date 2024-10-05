@@ -9,7 +9,7 @@ module Formular
 
     def self.element_set(**elements)
       self.elements.merge!(elements)
-      define_element_methods(self.elements)
+      define_element_methods(**self.elements)
     end
 
     def self.define_element_methods(**elements)
@@ -31,13 +31,13 @@ module Formular
         options[:builder] = self
         options[:attribute_name] = name if name
 
-        element_class.(**options, &block)
+        element_class.(options, &block)
       end
     end
 
     def initialize(**elements)
       @elements = self.class.elements.merge(elements)
-      self.class.define_element_methods(elements) if elements
+      self.class.define_element_methods(**elements) if elements
     end
     attr_reader :elements
 
