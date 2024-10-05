@@ -37,7 +37,7 @@ module Formular
 
     def initialize(**elements)
       @elements = self.class.elements.merge(elements)
-      self.class.define_element_methods(elements) if elements
+      self.class.define_element_methods(**elements) if elements
     end
     attr_reader :elements
 
