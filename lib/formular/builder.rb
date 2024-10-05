@@ -12,7 +12,7 @@ module Formular
       define_element_methods(**self.elements)
     end
 
-    def self.define_element_methods(**elements)
+    def self.define_element_methods(elements)
       elements.each { |k, v| define_element_method(k, v) }
     end
 
