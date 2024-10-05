@@ -17,15 +17,15 @@ module Formular
     end
 
     def self.define_element_method(element_name, element_class)
-      define_method(element_name) do |**args, &block|
-        if args.size > 1
-          name, options = args
-        else
-          case args.first
-          when Symbol then name = args.first
-          when Hash then options = args.first
-          end
-        end
+      define_method(element_name) do |*name, **options, &block|
+        # if args.size > 1
+        #   name args
+        # else
+        #   case args.first
+        #   when Symbol then name = args.first
+        #   when Hash then options = args.first
+        #   end
+        # end
 
         options ||= {}
         options[:builder] = self
