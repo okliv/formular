@@ -29,7 +29,7 @@ module Formular
 
         options ||= {}
         options[:builder] = self
-        options[:attribute_name] = name if name
+        options[:attribute_name] = name[0] if name[0]
 
         element_class.(**options, &block)
       end
