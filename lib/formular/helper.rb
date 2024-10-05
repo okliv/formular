@@ -6,7 +6,7 @@ module Formular
       builder_options = form_options.select { |k, v| form_options.delete(k) || true if [:builder, :model, :path_prefix, :errors, :elements].include?(k) }
 
       form_options[:action] ||= url
-      builder(model, builder_options).form(form_options, &block)
+      builder(model, **builder_options).form(form_options, &block)
     end
 
     BUILDERS = {
